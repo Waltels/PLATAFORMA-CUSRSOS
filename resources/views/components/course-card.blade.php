@@ -26,7 +26,7 @@
             </ul>
             <p class="text-sm text-gray-500 ml-auto">
                 <i class="fas fa-users"></i>
-                ({{$course->student_count}})
+                ({{$course->students_count}})
             </p>
         </div>
         <a href="{{route('courses.show', $course)}}" class=" mt-4 btn btn-primary btn-block"> 
