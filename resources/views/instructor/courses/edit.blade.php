@@ -1,40 +1,23 @@
-<x-app-layout>
-    <div class="container py-8 grid grid-cols-5">
-        <aside class="text-sm text-gray-600">
-            <h1 class="font-bold text-lg mb-4" >Edición del curso</h1>
-            <li class="leading-7 mb-1 border-l-4 border-indigo-400 pl-2">
-                <a href="">Información del curso</a>
-            </li>
-            <li class="leading-7 mb-1 border-l-4 border-transparent pl-2">
-                <a href="">Lecciones del curso</a>
-            </li>
-            <li class="leading-7 mb-1 border-l-4 border-transparent pl-2">
-                <a href="">Metas del curso</a>
-            </li>
-            <li class="leading-7 mb-1 border-l-4 border-transparent pl-2">
-                <a href="">Estudiantes</a>
-            </li>
-        </aside>
-        <div class="col-span-4 card">
-            <div class="card-body text-gray-600">
-                <h1 class="text-2lx font-bold">INFORMACION DEL CURSO</h1>
-                <hr class="mt-2 mb-6">
-                {!! Form::model($course, ['route'=>['instructor.courses.update', $course], 'method'=>'put', 'files'=> true]) !!}
-                
-                @include('instructor.courses.partials.form')
+<x-instructor-layout>
+  <x-slot name="course">
+    {{$course->slug}}
+  </x-slot>
 
-                <div class="flex justify-end">
-                    {!! Form::submit('Actualizar informacion', ['class'=> 'btn btn-primary']) !!}
-                </div>
 
-                {!! Form::close() !!}
-
-            </div>
+        <h1 class="text-2lx font-bold">INFORMACION DEL CURSO</h1>
+        <hr class="mt-2 mb-6">
+          {!! Form::model($course, ['route'=>['instructor.courses.update', $course], 'method'=>'put', 'files'=> true]) !!}
+                        
+        @include('instructor.courses.partials.form')
+        
+        <div class="flex justify-end">
+           {!! Form::submit('Actualizar informacion', ['class'=> 'btn btn-primary']) !!}
         </div>
-    </div>
+        
+        {!! Form::close() !!}
 
     <x-slot name="js">
         <script src="https://cdn.ckeditor.com/ckeditor5/24.0.0/classic/ckeditor.js"></script>
         <script src="{{asset('js/instructor/courses/form.js')}}"></script>        
     </x-slot>
-</x-app-layout>
+</x-instructor-layout>
