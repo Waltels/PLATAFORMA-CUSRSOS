@@ -27,7 +27,10 @@
                   <i class="fas fa-edit cursor-pointer text-blue-500" wire:click="edit({{$item}})"></i>
                   <i class="fas fa-eraser cursor-pointer text-red-500 ml-3 mr-3" wire:click="destroy({{$item}})"></i>
                 </div>
-              </header>   
+              </header>  
+              <div>
+                @livewire('instructor.courses-lesson', ['section' => $item], key($item->id))
+              </div> 
             @endif
               
           </div>
@@ -37,7 +40,7 @@
 
       <div x-data="{open: false}">
         <a x-on:click="open = true" class="flex items-center cursor-pointer">
-          <i class="far fa-plus-square text-xl text-red-500 mr-2">
+          <i class="far fa-plus-square text-lg text-red-500 mr-2">
             Agregar nueva sección
           </i>
         </a>
@@ -45,13 +48,13 @@
           <div class="card-body bg-gray-100">
               <h1 class="text-ml font-bold">Agregar nueva sección</h1>
           </div>
-          <div class="mb4">
-            <input wire:model="name" class="form-input w-full" placeholder="Escriba el nombre de la sección">
+          <div class="mb2 card-body">
+            <input wire:model="name" class="py-2 px-3 border border-gray-500 focus:outline-none focus:ring-indigo-700 focus:border-indigo-700 rounded-md sm:text-sm w-full" placeholder="Escriba el nombre de la sección">
             @error('name')
               <samp class="text-xs text-red-500">{{$message}}</samp>  
               @enderror
           </div>
-          <div class="flex justify-end mt-3">
+          <div class="flex justify-end mb-2 mr-6">
               <button class="btn btn-danger"x-on:click="open = false">Cancelar</button>
               <button class="btn btn-primary ml-3" wire:click="store">Agregar</button>
           </div>
