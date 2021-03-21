@@ -28,10 +28,6 @@
                         </div>
                     </div>
                 @endif
-
-
-
-
             </div>
         </div>
     </article>
