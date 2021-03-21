@@ -3,7 +3,7 @@
    
     <x-table-responsive>
        <div class="px-6 py-4 flex">
-           <input wire:keydown='limpiar_page' wire:model='search' class="form-input flex-1 shadow-sm" placeholder="Ingrese el nombre de um curso...">
+           <input wire:keydown='limpiar_page' wire:model='search' class="py-2 px-3 border border-gray-500 focus:outline-none focus:ring-indigo-700 focus:border-indigo-700 rounded-md sm:text-sm w-full flex-1 shadow-sm" placeholder="Ingrese el nombre de um curso...">
             <a class="btn btn-danger ml-2" href="{{route('instructor.courses.create')}}">Crear nuevo curso</a>
         </div>
             @if ($courses->count())
@@ -122,6 +122,6 @@
                     <strong>No se encontraron registros para la busqueda...</strong>
                 </div>
             @endif
-     </x-table-responsive>      
+    </x-table-responsive>      
   
 </div>
