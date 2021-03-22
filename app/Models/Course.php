@@ -52,6 +52,12 @@ class Course extends Model
         return "slug";
     }
 
+    //Relacion uno a uno
+
+    public function observation(){
+        return $this->hasOne('App\Models\Observation');
+    }
+
     //Relacion uno a muchos
 
     public function reviews(){
