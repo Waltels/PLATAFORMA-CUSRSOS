@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\LevelController;
 
 Route::get('', [HomeController::class, 'index'])->middleware('can:Ver dashboard')->name('home');
 
@@ -16,6 +17,7 @@ Route::resource('users', UserController::class)->only('index','edit','update')->
 
 Route::resource('categories', CategoryController::class)->names('categories');
 
+Route::resource('levels', LevelController::class)->names('levels');
 
 
 
