@@ -22,7 +22,7 @@
             <!-- seccion 1 lo que aprendera del curso-->
             <section class="card mb-12">
                 <div class="card-body">
-                    <h1 class="font-bold text-2xl mb-2">Lo que aprendera</h1>
+                    <h1 class="font-bold text-2xl mb-2 text-gray-800">Lo que aprendera</h1>
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
                         @foreach ($course->goals as $goal)
                         <li class="text-gray-700 text-base"><i class="fas fa-check mr-2"></i>{{$goal->name}}</li>                          
@@ -32,7 +32,7 @@
             </section>
             <!-- seccion 2   tema del curso-->
             <section class="mb-12">
-                <h1 class="font-bold text-3xl mb-2">Temario</h1>
+                <h1 class="font-bold text-3xl mb-2 text-gray-800">Temario</h1>
                 @foreach ($course->sections as $section)
                     <article class="mb-4 shadow"
                     @if ($loop->first)
@@ -60,7 +60,7 @@
             </section>
             <!-- seccion 3   requisitos del curso-->
             <section class="mb-8">
-                <h1 class="font-bold text-3xl">Requisitos</h1>
+                <h1 class="font-bold text-3xl text-gray-800">Requisitos</h1>
                 <ul class="list-disc list-inside">
                     @foreach ($course->requirements as $requirement)
                         <li class="text-gray-700 text.base">{{$requirement->name}}</li>
@@ -73,7 +73,9 @@
                 <div class="text-gray-700 text-base">
                     {!!$course->description!!}
                 </div>
-            </section>          
+            </section>  
+            <!-- seccion 5  Review del curso-->
+            @livewire('courses-reviews', ['course' => $course])
         </div>
         <!-- cuerpo del curso barra derecha-->
         <div class="order-1 lg:order-2">
