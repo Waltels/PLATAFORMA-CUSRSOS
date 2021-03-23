@@ -269,11 +269,21 @@ return [
             'route'  => 'admin.levels.index',
             'icon' => 'fas fa-fw fa-chart-line',
         ],
+        
+        [
+            'text' => 'Precios',
+            'route'  => 'admin.prices.index',
+            'icon' => 'fab fa-fw fa-cc-visa',
+        ],
+
+        
         [
             'text' => 'Pendientes de aprobación',
             'route'  => 'admin.courses.index',
             'icon' => 'fas fa-fw fa-user',
         ],
+        /*
+        
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
@@ -332,7 +342,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ],*/
     ],
 
     /*
