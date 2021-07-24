@@ -10,8 +10,11 @@
             'route' => route('courses.index'),
             'active' => request()->routeIs('courses.*')
         ],
-
-
+        [
+            'name' => 'Mis Cursos',
+            'route' => route('livewire.miscursos-courses'),
+            'active' => request()->routeIs('livewire.miscursos-courses')
+        ],
     ];
 @endphp
 
