@@ -1,7 +1,7 @@
 @php
     $nav_links = [
         [
-            'name' => 'Home',
+            'name' => 'Inicio',
             'route' => route('home'),
             'active' => request()->routeIs('home')
         ],
@@ -28,12 +28,12 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('home') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <x-jet-application-mark class="block h-9 w-auto" /> 
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ml-30">
                     @foreach ($nav_links as $nav_link)
                     
                         <x-jet-nav-link href="{{ $nav_link['route'] }}" :active="$nav_link['active']">
@@ -162,8 +162,8 @@
                         </x-jet-dropdown>
 
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        <a href="{{ route('login') }}" class="btn btn-success">Iniciar sesión</a>
+                        <a href="{{ route('register') }}" class="btn btn-danger">Regístrate</a>
                     @endauth
                 </div>
             </div>
@@ -189,7 +189,7 @@
                     {{ $nav_link['name'] }}
                 </x-jet-responsive-nav-link>
 
-            @endforeach>
+            @endforeach
 
         </div>
 

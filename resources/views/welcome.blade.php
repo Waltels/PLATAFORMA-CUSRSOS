@@ -1,10 +1,10 @@
 <x-app-layout>
     <!-- Seccion 1.- Portada -->
-    <section class="bg-cover" style="background-image: url({{asset('img/home/people-2557399.jpg')}})">
+    <section class="bg-cover" style="background-image: url({{asset('img/home/people2-2557399.jpg')}})">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
             <div class="w-full md:w-3/4 lg:w-1/2">
-                <h1 class="text-white font-bold text-4xl">Domina la tecnología web con Coders Free</h1>
-                <p class="text-white text-lg mt-2 mb-6">En Coders Free encontrarás cursos, manuales y artículos que te ayudarán a convertirte en un profesional del desarrollador web</p>
+                <h1 class="text-white font-bold text-4xl">Capacitate en educacón con SERCONED</h1>
+                <p class="text-white text-lg mt-2 mb-6">En SERCONED  encontrarás cursos, manuales y artículos que te ayudarán a deasrrollar tu capacidades como maestra y maestro</p>
       
                 <!-- Boton buscar-->
                 @livewire('search')
@@ -16,7 +16,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-9">
             <article>
                 <figure class="mb-3">
-                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/buildings-5941345_640.jpg')}}" alt="">
+                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/coursos.jpg')}}" alt="" style="height: 160px">
                 </figure>
                 <head class="mt-5">
                     <h1 class="text-center text-xl text-gray-700">Cursos y proyectos</h1>
@@ -25,29 +25,29 @@
             </article>
             <article>
                 <figure class="mb-3">
-                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/buildings-5941345_640.jpg')}}" alt="">
+                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/22.jpg')}}" alt="" style="height: 160px">
                 </figure>
                 <head class="mt-5">
-                    <h1 class="text-center text-xl text-gray-700">Cursos y costos</h1>
+                    <h1 class="text-center text-xl text-gray-700">Asesoramiento</h1>
                 </head>
-                <p class="text-sm text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio maiores amet repellat beatae ipsa minus rerum.</p>
+                <p class="text-sm text-gray-500">Artículos de educación en planificacion, concresion y evaluacion de los procesos curriculares, para potenciar tu actualizacion y profesionalización</p>
             </article>
             <article>
                 <figure class="mb-3">
-                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/nose-4610466_640.jpg')}}" alt="">
+                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/1.jpg')}}" alt="" style="height: 160px">
                 </figure>
                 <head class="mt-5">
-                    <h1 class="text-center text-xl text-gray-700">Cursos y listas</h1>
+                    <h1 class="text-center text-xl text-gray-700">Nuestro Blog</h1>
                 </head>
-                <p class="text-sm text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio maiores amet repellat beatae ipsa minus rerum.</p>
+                <p class="text-sm text-gray-500">Artículos de educación en planificacion, concresion y evaluacion de los procesos curriculares, para potenciar tu actualizacion y profesionalización.</p>
 
             </article>
             <article>
                 <figure class="mb-3">
-                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/winter-5983671_640.jpg')}}" alt="">
+                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/eventos.jpg')}}" alt="" style="height: 160px">
                 </figure>
                 <head class="mt-5">
-                    <h1 class="text-center text-xl text-gray-700">Cursos</h1>
+                    <h1 class="text-center text-xl text-gray-700">Eventos</h1>
                 </head>
                 <p class="text-sm text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio maiores amet repellat beatae ipsa minus rerum.</p>
 
@@ -70,7 +70,7 @@
     </section>
     <!-- Seccion 4.- Ultimos cursos -->
     <section class="my-24">
-        <h1 class="text-center text-3xl text-gray-600">ÚLTIMOS CURSOS</h1>
+        <h1 class="text-center text-3xl  ">ÚLTIMOS CURSOS</h1>
         <p class="text-center text-gray-500 text-sm mb-6">Trabajo duro para seguir subiendo cursos</p>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
             @foreach ($courses as $course)
