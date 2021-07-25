@@ -1,13 +1,13 @@
 <div>
-    <div class="bg-gray-200 py-4 mb-16">
+    <div class="bg-red-600 py-4 mb-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
-            <button class="focus:outline-none bg-white shadow h-12 px-4 rounded-lg text-gray-700 mr-4" wire:click = "resetFilters">
+            <button class="focus:outline-none bg-white shadow h-10 px-4 rounded-lg text-gray-700 mr-4" wire:click = "resetFilters">
                 <i class="fas fa-archway text-xs mr-2"></i> Todos los cursos
             </button>
 
             <!-- Dropdown categorias-->
             <div class="relative mr-4" x-data="{open:false}">
-                <button class="px-4 text-gray-700 block h-12 rounded-lg overflow-hidden focus:outline-none bg-white shadow"x-on:click="open=true">
+                <button class="px-4 text-gray-700 block h-10 rounded-lg overflow-hidden focus:outline-none bg-white shadow"x-on:click="open=true">
                     <i class="fas fa-tags text-xs mr-2"></i>Categoria <i class="fas fa-angle-down  ml-3"></i>
                 </button>
                 <!-- cuerpo categorias-->
@@ -19,7 +19,7 @@
             </div>
             <!-- Dropdown niveles-->
             <div class="relative mr-4" x-data="{open:false}">
-                <button class="px-4 text-gray-700 block h-12 rounded-lg overflow-hidden focus:outline-none bg-white shadow"x-on:click="open=true">
+                <button class="px-4 text-gray-700 block h-10 rounded-lg overflow-hidden focus:outline-none bg-white shadow"x-on:click="open=true">
                     <i class="fas fa-tags text-xs mr-2"></i>Niveles<i class="fas fa-angle-down  ml-3"></i>
                 </button>
                 <!-- Cuerpo niveles -->

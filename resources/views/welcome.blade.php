@@ -11,8 +11,8 @@
         </div>
     </section>
     <!-- Seccion 2.- Contenido -->
-    <section class="mt-24">
-        <h1 class="text-gray-600 text-center text-3xl mb-6">CONTENIDO</h1>
+    <section class="mt-20">
+        <h1 class="text-gray-600 text-center text-3xl mt-15 mb-6">CONTENIDO</h1>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-9">
             <article>
                 <figure class="mb-3">

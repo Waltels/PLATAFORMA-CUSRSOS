@@ -1,7 +1,14 @@
 <div>
+    <section class="bg-cover" style="background-image: url({{asset('img/cursos/azul.jpg')}})">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="w-full">
+                <h1 class="text-center text-white text-4xl">Empecemos a aprender, {{ Auth::user()->name }}</h1>
+             </div>
+        </div>
+    </section>
     <section class="my-20">
-        <h1 class="text-center text-3xl text-gray-600">Empecemos a aprender, {{ Auth::user()->name }}</h1>
-        <p class="text-center text-gray-500 text-sm mt-6 mb-6">Mi aprendizaje con SERCONED</p>
+
+        <p class="text-center text-gray-500 text-xl mt-6 mb-6">Mi aprendizaje con SERCONED</p>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
                 @foreach ($users->courses as $course)  
                     <article class="card flex flex-col">
