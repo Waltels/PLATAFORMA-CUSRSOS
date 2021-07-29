@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CourseController;
 use App\Http\Livewire\CourseStatus;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,10 @@ Route::get('cursos/{course}',[CourseController::class, 'show'])->name('courses.s
 Route::post('cursos/{course}/enrolled', [CourseController::class, 'enrolled'])->middleware('auth')->name('courses.enrolled');
 
 Route::get('course-status/{course}', CourseStatus::class)->name('courses.status')->middleware('auth');
+
+/* RUTAS DE LOS ARTICULOS*/
+Route::get('articulos', [ArticleController::class, 'index'])->name('articles.index');
+
+Route::get('articulos/{article}', function ($articulo) {
+    return "aqui se mostrara el contenido de los articulos";
+})->name('articles.show');

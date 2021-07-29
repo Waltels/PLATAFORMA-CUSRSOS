@@ -15,6 +15,11 @@
             'route' => route('livewire.miscursos-courses'),
             'active' => request()->routeIs('livewire.miscursos-courses')
         ],
+        [
+            'name' => 'Articulos',
+            'route' => route('articles.index'),
+            'active' => request()->routeIs('articles.index')
+        ],
     ];
 @endphp
 

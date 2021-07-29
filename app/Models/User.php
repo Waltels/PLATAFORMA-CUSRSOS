@@ -75,6 +75,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Course');
     }
 
+    public function articles_dictated(){
+        return $this->hasMany('App\Models\Article');
+    }
+
     public function reviews(){
         return $this->hasMany('App\Models\Review');
     } 
