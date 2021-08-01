@@ -37,7 +37,7 @@
                 <div class="flex flex-wrap">
                     <i class="far fa-calendar-alt mt-2 mb-2"></i><p class="ml-6 mt-1 mb-2">{{Str::limit($article->created_at)}}</p>
                 </div>
-                <img class="h-full w-full object-cover" src="{{Storage::url($article->img->url)}}" alt="">
+                <img class="h-full w-full object-cover object-center" src="{{Storage::url($article->img->url)}}" alt="">
                 <div class="flex flex-wrap m-3">
                     
                     <a class="w-24 btn  mr-2 bg-blue-400 hover:bg-blue-500 text-white text-center" href=""><i class="fab fa-facebook-f"></i></a>
@@ -46,9 +46,9 @@
 
                 </div>
 
-
-               <p class="mb-6 font-serif" >{{Str::limit($article->description, 330)}}</p>
-
+                <div class="py-3">
+                    {!!Str::limit($article->description, 300)!!}
+                </div>
                <a href="{{route('articles.show', $article)}}" class="btn btn-primary p-6"> 
                 Leer mas
                 </a>

@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\LevelController;
 use App\Http\Controllers\Admin\PriceController;
+use App\Http\Controllers\Admin\ArticleController;
 
 Route::get('', [HomeController::class, 'index'])->middleware('can:Ver dashboard')->name('home');
 
@@ -32,3 +33,9 @@ Route::post('courses/{course}/approved', [CourseController::class, 'approved'])-
 Route::get('courses/{course}/observation', [CourseController::class, 'observation'])->name('courses.observation');
 
 Route::post('courses/{course}/reject', [CourseController::class, 'reject'])->name('courses.reject');
+
+//RUTAS DE LOS ARTICULOS
+
+Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
+Route::post('articles/{article}/approved', [ArticleController::class, 'approved'])->name('articles.approved');

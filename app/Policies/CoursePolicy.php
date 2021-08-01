@@ -5,6 +5,7 @@ namespace App\Policies;
 use App\Models\Course;
 use App\Models\Review;
 use App\Models\User;
+use App\Models\Article;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class CoursePolicy
@@ -42,6 +43,14 @@ class CoursePolicy
     }
     public function revision(User $user, Course $course){
         if ($course->status == 2) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function revisionar(User $user, Article $article){
+        if ($article->status == 2) {
             return true;
         }else{
             return false;

@@ -67,7 +67,7 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Article $article)
-    {
+    {  
         return view('editor.articles.show', compact('article'));
     }
 
@@ -92,7 +92,30 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'slug' => 'required|unique:articles,slug,'. $article->id,
+            'subtitle' => 'required',
+            'description' => 'required',
+            'carticle_id' => 'required',
+            'file' => 'image',
+        ]);
+
+        $article->update($request->all());
+        if ($request->file('file')) {
+            $url = Storage::put('articles', $request->file('file'));
+            if ($article->img) {
+                Storage::delete($article->img->url);
+                $article->img->update([
+                    'url' => $url
+                ]);
+            }else{
+                $article->img->create([
+                    'url' => $url
+                ]);
+            }
+        }
+        return redirect()->route('editor.articles.edit', $article);
     }
 
     /**
@@ -104,5 +127,18 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         //
+    }
+
+    public function status(Article $article){
+
+        $article->status = 2;
+        $article->save();
+
+        return back();
+        if ($article->observationar) {
+            $article->observationar->delete();
+        }
+
+        return redirect()->route('editor.articles.edit', $article);
     }
 }

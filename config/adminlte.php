@@ -258,7 +258,7 @@ return [
             'active'        => ['admin/users*']
         ],
 
-        ['header' => 'OPCIONES DE CURSO'],
+        ['header' => 'OPCIONES DE CURSOS'],
         [
             'text' => 'Categorías',
             'route'  => 'admin.categories.index',
@@ -275,27 +275,30 @@ return [
             'route'  => 'admin.prices.index',
             'icon' => 'fab fa-fw fa-cc-visa',
         ],
-
-        
         [
-            'text' => 'Pendientes de aprobación',
+            'text' => 'Cursos para aprobar',
             'route'  => 'admin.courses.index',
             'icon' => 'fas fa-fw fa-user',
         ],
-        /*
-        
+        ['header' => 'OPCIONES DE ARTICULOS'],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Categorías',
+            'route'  => 'admin.categories.index',
+            'icon' => 'fas fa-fw fa-cogs',
         ],
         [
+            'text' => 'Articulos para aprobar',
+            'route'  => 'admin.articles.index',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+
+       /* [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Cursos para aprobar',
+                    'route'  => 'admin.courses.index',
                 ],
                 [
                     'text'    => 'level_one',
@@ -322,7 +325,7 @@ return [
                     ],
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Articulos para aprobar',
                     'url'  => '#',
                 ],
             ],
