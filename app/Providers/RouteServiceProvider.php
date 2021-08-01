@@ -70,6 +70,12 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('miscursos')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/miscursos.php'));
+
+            Route::middleware('web', 'auth')
+                ->name('editor.')
+                ->prefix('editor')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/editor.php'));
         });
     }
 

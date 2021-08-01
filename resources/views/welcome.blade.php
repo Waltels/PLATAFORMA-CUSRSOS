@@ -16,7 +16,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-9">
             <article>
                 <figure class="mb-3">
-                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/coursos.jpg')}}" alt="" style="height: 160px">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{asset('img/home/coursos.jpg')}}" alt="" style="height: 160px">
                 </figure>
                 <head class="mt-5">
                     <h1 class="text-center text-xl text-gray-700">Cursos y proyectos</h1>
@@ -25,7 +25,7 @@
             </article>
             <article>
                 <figure class="mb-3">
-                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/22.jpg')}}" alt="" style="height: 160px">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{asset('img/home/22.jpg')}}" alt="" style="height: 160px">
                 </figure>
                 <head class="mt-5">
                     <h1 class="text-center text-xl text-gray-700">Asesoramiento</h1>
@@ -34,7 +34,7 @@
             </article>
             <article>
                 <figure class="mb-3">
-                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/1.jpg')}}" alt="" style="height: 160px">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{asset('img/home/1.jpg')}}" alt="" style="height: 160px">
                 </figure>
                 <head class="mt-5">
                     <h1 class="text-center text-xl text-gray-700">Nuestro Blog</h1>
@@ -44,7 +44,7 @@
             </article>
             <article>
                 <figure class="mb-3">
-                    <img class="rounded-xl h36 w-full object-cover" src="{{asset('img/home/eventos.jpg')}}" alt="" style="height: 160px">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{asset('img/home/eventos.jpg')}}" alt="" style="height: 160px">
                 </figure>
                 <head class="mt-5">
                     <h1 class="text-center text-xl text-gray-700">Eventos</h1>

@@ -34,6 +34,4 @@ Route::get('course-status/{course}', CourseStatus::class)->name('courses.status'
 /* RUTAS DE LOS ARTICULOS*/
 Route::get('articulos', [ArticleController::class, 'index'])->name('articles.index');
 
-Route::get('articulos/{article}', function ($articulo) {
-    return "aqui se mostrara el contenido de los articulos";
-})->name('articles.show');
+Route::get('articulos/{article}', [ArticleController::class, 'show'])->name('articles.show');

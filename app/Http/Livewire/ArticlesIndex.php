@@ -6,7 +6,7 @@ use App\Models\Article;
 use App\Models\Carticle;
 use Livewire\Component;
 
-class ArticleIndex extends Component
+class ArticlesIndex extends Component
 {
 
     public $carticle_id;
@@ -19,7 +19,7 @@ class ArticleIndex extends Component
                             ->carticle($this->carticle_id)
                             ->latest('id')
                             ->paginate(10);
-        return view('livewire.article-index', compact('articles', 'carticles'));
+        return view('livewire.articles-index', compact('articles', 'carticles'));
     }
 
     public function resetFilterscat(){

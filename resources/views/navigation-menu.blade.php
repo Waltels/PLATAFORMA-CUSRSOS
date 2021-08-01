@@ -10,15 +10,19 @@
             'route' => route('courses.index'),
             'active' => request()->routeIs('courses.*')
         ],
+
+        
         [
             'name' => 'Mis Cursos',
             'route' => route('livewire.miscursos-courses'),
             'active' => request()->routeIs('livewire.miscursos-courses')
+            
         ],
+        
         [
             'name' => 'Articulos',
             'route' => route('articles.index'),
-            'active' => request()->routeIs('articles.index')
+            'active' => request()->routeIs('articles.*')
         ],
     ];
 @endphp
@@ -139,6 +143,12 @@
                                     </x-jet-dropdown-link>                                    
                                 @endcan
 
+                                
+                                    <x-jet-dropdown-link href="{{ route('editor.articles.index') }}">
+                                        Editor
+                                    </x-jet-dropdown-link>                                    
+                               
+
                                 @can('Ver dashboard')
                                     <x-jet-dropdown-link href="{{ route('admin.home') }}">
                                         Administrador
@@ -226,6 +236,10 @@
                             Instructor
                         </x-jet-responsive-nav-link>
                     @endcan
+
+                    <x-jet-responsive-nav-link href="{{ route('editor.articles.index') }}" :active="request()->routeIs('editor.articles.index')">
+                        Editor
+                    </x-jet-responsive-nav-link>
 
                     @can('Ver dashboard')
                         <x-jet-responsive-nav-link href="{{ route('admin.home') }}" :active="request()->routeIs('admin.home')">

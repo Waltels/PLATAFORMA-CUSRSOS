@@ -9,7 +9,7 @@
     <div class="container grid grid-cols-1 lg:grid-cols-3 gap-6 m-6">
         <div>
             <!-- Boton buscar-->
-            @livewire('search')
+            @livewire('searcharticle')
 
             <div class="bg-gray-300 rounded mt-5 mb-5">
                 <h1 class="text-center font-bold text-2xl py-3">Categorias</h1> 
@@ -17,7 +17,7 @@
                 <ul class="py-3">
                     <li class="leaing-10 px-5 cursor-pointer hover:bg-gray-500 text-blue-800 font-semibold" wire:click="resetFilterscat" >Todas las categorias</li>
                     @foreach ($carticles as $carticle)
-                    <li class="leaing-10 px-5 cursor-pointer hover:bg-gray-500" wire:click="$set('carticle_id',{{$carticle->id}})">{{$carticle->name}}</li>
+                    <li class="leading-10 px-5 cursor-pointer hover:bg-gray-500" wire:click="$set('carticle_id',{{$carticle->id}})">{{$carticle->name}}</li>
                     @endforeach
                     
                 </ul>  
@@ -30,7 +30,8 @@
         <div class="col-span-2">
             @foreach ($articles as $article)
             <div class="mt-2 mb-8">
-                <h1 class="text-2xl font-bold font-serif">{{Str::limit($article->title)}}</h1>
+                <h1 class="text-2xl font-bold font-serif"><a  href="{{route('articles.show', $article)}}">{{Str::limit($article->title)}}</a> </h1>
+                <h3 class="text-xl font-serif mb-2">{{Str::limit($article->subtitle, 330)}}</h3>
                 <p>autor del articulo</p>
                 <hr class="bg-gray-800">
                 <div class="flex flex-wrap">
@@ -48,7 +49,7 @@
 
                <p class="mb-6 font-serif" >{{Str::limit($article->description, 330)}}</p>
 
-               <a href="{{route('courses.show', $article)}}" class="btn btn-primary p-6"> 
+               <a href="{{route('articles.show', $article)}}" class="btn btn-primary p-6"> 
                 Leer mas
                 </a>
             </div>

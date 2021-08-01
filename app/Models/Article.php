@@ -25,6 +25,11 @@ class Article extends Model
 
         }
     }
+    
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
 
 
     //Relacion uno a uno polimorfica

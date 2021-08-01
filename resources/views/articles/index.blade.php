@@ -1,5 +1,5 @@
 <x-app-layout>
 
-    @livewire('article-index')
+    @livewire('articles-index')
     
 </x-app-layout>
