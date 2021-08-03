@@ -15,6 +15,12 @@ class CreateObsarticlesTable extends Migration
     {
         Schema::create('obsarticles', function (Blueprint $table) {
             $table->id();
+
+            $table->text('body');
+
+            $table->unsignedBigInteger('article_id');
+            $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

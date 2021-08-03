@@ -10,9 +10,8 @@
                     <li class="leading-7 mb-1 border-l-4 @routeIs('editor.articles.obsarticle', $article) border-indigo-400 @else border-transparent @endif pl-2">
                         <a href="{{route('editor.articles.obsarticle', $article)}}">Observaciones del Artículo</a>
                     </li>
-                @endif  
+                @endif
             </ul>
-
             @switch($article->status)
             @case(1)
                 <form action="{{route('editor.articles.status', $article)}}" method="POST">
@@ -37,29 +36,15 @@
                 @break
             @default
                 
-        @endswitch
-
-
+            @endswitch
         </aside>
         <div class="col-span-4 card text-gray-600">
             <div class="card-body">
-                <h1 class="text-2xl font-bold">INFORMACION DEL ARTICULO</h1>
-                <hr class="mt-2 mb-8">
-
-                {!! Form::model($article, ['route'=>['editor.articles.update', $article], 'method'=>'put', 'files'=> true]) !!}
-                    
-                     @include('editor.articles.partials.form')
-
-                    <div class="flex justify-end">
-                        {!! Form::submit('Actualizar informacion', ['class'=> 'btn btn-primary']) !!}
-                     </div>
-                {!! Form::close() !!}
-
-                <x-slot name="js">
-                    <script src="https://cdn.ckeditor.com/ckeditor5/24.0.0/classic/ckeditor.js"></script>
-                    <script src="{{asset('js/instructor/courses/form.js')}}"></script>        
-                </x-slot>
-                
+                <h1 class="text-2xl font-bold">OBSERVACIONES DEL ARTÍCULO</h1>
+                <hr class="mt-2 mb-6">
+                <div class="text-gray-600 px-8">
+                    {!!$article->obsarticle->body!!}
+                </div>
             </div>
         </div>
     </div>

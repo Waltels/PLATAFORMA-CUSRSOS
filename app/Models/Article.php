@@ -31,6 +31,12 @@ class Article extends Model
         return "slug";
     }
 
+    //Relacion uno a uno
+
+    public function obsarticle(){
+        return $this->hasOne('App\Models\Obsarticle');
+    }
+
 
     //Relacion uno a uno polimorfica
 

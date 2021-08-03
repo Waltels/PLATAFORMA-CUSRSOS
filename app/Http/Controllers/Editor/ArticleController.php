@@ -134,11 +134,15 @@ class ArticleController extends Controller
         $article->status = 2;
         $article->save();
 
-        return back();
-        if ($article->observationar) {
-            $article->observationar->delete();
+        
+        if ($article->obsarticle) {
+            $article->obsarticle->delete();
         }
 
         return redirect()->route('editor.articles.edit', $article);
     }
+
+    public function obsarticle(Article $article){
+        return view('editor.articles.obsarticle', compact('article'));
+        }
 }

@@ -39,4 +39,35 @@ class ArticleController extends Controller
 
         return redirect()->route('admin.articles.index')->with('info', 'El artículo que se reviso, se publico con éxito en el blog');
     }
+
+    public function observation( Article $article){
+        return view('admin.articles.observation', compact('article'));
+    }
+
+    public function reject(Request $request, Article $article){
+
+        $article->obsarticle()->create($request->all());
+
+        $request->validate([  
+            'body' => 'required'
+        ]);
+
+        $article->status = 1;
+        $article->save();
+
+        /*$request->validate([
+            'body' => 'required'
+        ]);
+
+        $artticle->observation()->create($request->all());
+
+        $artticle->status = 1;
+        $artticle->save();
+
+        //enviar el correo electronico
+        $mail = new RejectCourse($artticle);
+        Mail::to($artticle->teacher->email)->send($mail);*/
+
+        return redirect()->route('admin.articles.index')->with('info', 'El artículo se ha rechazado con éxito');
+    }
 }

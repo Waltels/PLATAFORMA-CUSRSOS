@@ -9,3 +9,5 @@ Route::redirect('', 'editor/articles');
 Route::resource('articles', ArticleController::class)->names('articles');
 
 Route::post('articles/{article}/status', [ArticleController::class, 'status'])->name('articles.status');
+
+Route::get('articles/{article}/obsarticle', [ArticleController::class, 'obsarticle'])->name('articles.obsarticle');

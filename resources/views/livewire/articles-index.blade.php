@@ -8,27 +8,36 @@
     </section>
     <div class="container grid grid-cols-1 lg:grid-cols-3 gap-6 m-6">
         <div>
+            <div class="flex justify-center">
+                <img class="w-1/3" src="{{asset('img/articles/serconed.png')}}" alt="">
+            </div>
+            <h1 class="text-4xl text-center"> <samp class="text-blue-800">SERC</samp><samp class="text-red-600">ONED</samp> </h1>
+            <p class="text-center mb-4">Servicio de Consultoria en Educacion</p>
+            
             <!-- Boton buscar-->
             @livewire('searcharticle')
 
-            <div class="bg-gray-300 rounded mt-5 mb-5">
-                <h1 class="text-center font-bold text-2xl py-3">Categorias</h1> 
+            <div class="card rounded mt-5 mb-5">
+                <h1 class="text-center font-bold text-xl py-1">Categorias</h1> 
                 <hr>
                 <ul class="py-3">
-                    <li class="leaing-10 px-5 cursor-pointer hover:bg-gray-500 text-blue-800 font-semibold" wire:click="resetFilterscat" >Todas las categorias</li>
+                    <li class="leaing-10 px-5 cursor-pointer hover:bg-blue-500" wire:click="resetFilterscat" >Todas las categorias</li>
                     @foreach ($carticles as $carticle)
-                    <li class="leading-10 px-5 cursor-pointer hover:bg-gray-500" wire:click="$set('carticle_id',{{$carticle->id}})">{{$carticle->name}}</li>
+                    <li class="leading-7 px-5 cursor-pointer hover:bg-blue-500" wire:click="$set('carticle_id',{{$carticle->id}})">{{$carticle->name}}</li>
                     @endforeach
                     
                 </ul>  
             </div>
-            <div class="bg-gray-400 rounded mb-5">1    
+            <div class="flex content-center bg-red-700 h-20">
+                <a class="mt-4 btn bg-red-700 btn-block text-white text-center h-18" href="">Visita nuestros cursos</a>
             </div>
-            <div class="bg-gray-600 rounded mb-5">1    
+            <div class="flex content-center bg-red-700 h-20 mt-2">
+                <a class="mt-4 btn bg-red-700 btn-block text-white text-center h-18" href="">Tosda la información de nuestros eventos</a>
             </div>
         </div>    
         <div class="col-span-2">
             @foreach ($articles as $article)
+            <hr class="py-2">
             <div class="mt-2 mb-8">
                 <h1 class="text-2xl font-bold font-serif"><a  href="{{route('articles.show', $article)}}">{{Str::limit($article->title)}}</a> </h1>
                 <h3 class="text-xl font-serif mb-2">{{Str::limit($article->subtitle, 330)}}</h3>
@@ -46,12 +55,12 @@
 
                 </div>
 
-                <div class="py-3">
+                <div class="py-2">
                     {!!Str::limit($article->description, 300)!!}
                 </div>
-               <a href="{{route('articles.show', $article)}}" class="btn btn-primary p-6"> 
-                Leer mas
-                </a>
+                <div>
+                   <a  href="{{route('articles.show', $article)}}" class="btn btn-primary"> Leer mas</a>
+                </div>
             </div>
             @endforeach
         </div>

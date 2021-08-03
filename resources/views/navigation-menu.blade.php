@@ -177,8 +177,8 @@
                         </x-jet-dropdown>
 
                     @else
-                        <a href="{{ route('login') }}" class="btn btn-success">Iniciar sesión</a>
-                        <a href="{{ route('register') }}" class="btn btn-danger">Regístrate</a>
+                        <a href="{{ route('login') }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Iniciar sesión</a>
+                        <a href="{{ route('register') }}" class="bg-red-500 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">Regístrate</a>
                     @endauth
                 </div>
             </div>

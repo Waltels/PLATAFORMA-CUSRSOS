@@ -37,5 +37,11 @@ Route::post('courses/{course}/reject', [CourseController::class, 'reject'])->nam
 //RUTAS DE LOS ARTICULOS
 
 Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
+
 Route::get('articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
+
 Route::post('articles/{article}/approved', [ArticleController::class, 'approved'])->name('articles.approved');
+
+Route::get('articles/{article}/observation', [ArticleController::class, 'observation'])->name('articles.observation');
+
+Route::post('articles/{article}/reject', [ArticleController::class, 'reject'])->name('articles.reject');
