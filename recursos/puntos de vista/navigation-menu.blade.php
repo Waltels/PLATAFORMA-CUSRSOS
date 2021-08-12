@@ -149,12 +149,11 @@
                                     </x-jet-dropdown-link>                                    
                                
 
-                                @can('Ver dashboard')
+                                
                                     <x-jet-dropdown-link href="{{ route('admin.home') }}">
                                         Administrador
                                     </x-jet-dropdown-link>                                    
-                                @endcan
-
+                                
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                     <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
                                         {{ __('API Tokens') }}
